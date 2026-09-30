@@ -1,3 +1,4 @@
+import bridge.AsciiRenderer;
 import bridge.Circle;
 import bridge.RasterRenderer;
 import bridge.Renderer;
@@ -14,6 +15,7 @@ public class Main {
 
         Renderer vector = new VectorRenderer();
         Renderer raster = new RasterRenderer();
+        Renderer ascii = new AsciiRenderer();
         int passed = 0;
         int total = 0;
 
@@ -52,6 +54,11 @@ public class Main {
             System.out.println("  expected: sameObject=true, stateUnchanged=true,"
                     + " before=VECTOR circle radius=2, after=RASTER circle radius=2");
         }
+
+        total++;
+        passed += check("T6", new Circle("C6", 2, ascii), ascii, "ASCII circle radius=2");
+        total++;
+        passed += check("T7", new Square("S7", 3, ascii), ascii, "ASCII square side=3");
 
         System.out.println("SUMMARY: " + passed + "/" + total + " PASS");
     }
