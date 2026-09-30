@@ -38,4 +38,4 @@ No library or interactive input is needed. Expected results:
 | T6 | `ASCII circle radius=2` |
 | T7 | `ASCII square side=3` |
 
-`demo-output.txt` contains the captured run. `extension.diff` shows the Java source changes from the base commit to the AsciiRenderer extension. OpenAI Codex assisted with examples, explanations, and verification.
+`demo-output.txt` contains the captured run. `extension.diff` shows the Java source changes from the base commit to the AsciiRenderer extension. OpenAI Codex assisted with the Java implementation, report drafting, and verification.
