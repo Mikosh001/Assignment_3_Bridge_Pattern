@@ -1,0 +1,7 @@
+src/Main.java
+src/bridge/Shape.java
+src/bridge/Circle.java
+src/bridge/Square.java
+src/bridge/Renderer.java
+src/bridge/VectorRenderer.java
+src/bridge/RasterRenderer.java
