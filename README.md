@@ -40,5 +40,3 @@ No library or interactive input is needed. Expected results:
 | T5 | Same Circle reference (`==`), ID `C5`, radius `2`; before `VECTOR circle radius=2`, after `RASTER circle radius=2` |
 | T6 | `ASCII circle radius=2` |
 | T7 | `ASCII square side=3` |
-
-`demo-output.txt` contains the captured run. `extension.diff` shows the Java source changes from the base commit to the AsciiRenderer extension. OpenAI Codex assisted with the Java implementation, report drafting, and verification.
