@@ -10,9 +10,12 @@ Circle and Square keep their own dimensions. A Renderer supplies the rendering s
 | Bridge role | Class and source |
 | --- | --- |
 | Abstraction | `Shape` - `src/bridge/Shape.java` |
-| A1 / A2 | `Circle` - `src/bridge/Circle.java`; `Square` - `src/bridge/Square.java` |
+| A1 | `Circle` - `src/bridge/Circle.java` |
+| A2 | `Square` - `src/bridge/Square.java` |
 | Implementor | `Renderer` - `src/bridge/Renderer.java` |
-| I1 / I2 / I3 | `VectorRenderer`, `RasterRenderer`, `AsciiRenderer` - matching files in `src/bridge/` |
+| I1 | `VectorRenderer` - `src/bridge/VectorRenderer.java` |
+| I2 | `RasterRenderer` - `src/bridge/RasterRenderer.java` |
+| I3 | `AsciiRenderer` - `src/bridge/AsciiRenderer.java` |
 | Client | `Main` - `src/Main.java` (default package) |
 
 The bridge is the private `Renderer renderer` field in `Shape`. `Circle.execute()` calls `renderCircle()` and `Square.execute()` calls `renderSquare()` through that interface. `Shape.setImplementation(Renderer)` replaces the renderer. T5 in `Main` compares the original and later shape references with `==` and checks that its ID and radius did not change.
